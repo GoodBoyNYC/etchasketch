@@ -1,0 +1,8 @@
+.container {
+    display: flex;
+}
+.col {
+    display: flex;
+    flex: 1;
+}
+/*create root*/
