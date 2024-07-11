@@ -1,11 +1,26 @@
-.container{
+.container {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;  
+    flex-wrap: wrap;
+    width: 960px; /* Set width to match height for a square grid */
+    height: 960px; /* Fixed height for the container */
+    margin: auto; /* Center the container horizontally */
+    border: 1px black solid;
+    box-sizing: border-box;
 }
 .col {
-      flex: 1 0 33%;                 /* NEW */
-  background-color: blue;
-    background-color: lightgrey;
+    flex: 0 0 calc(960px / 16); /* Calculate the width based on the number of columns */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
     color: orange;
-  }
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+body, html {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
