@@ -1,7 +1,9 @@
 let gridSize = 20;
 const container = document.querySelector('.container');
 const btnReset = document.querySelector('.reset');
+const btnGridSize = document.querySelector('.gridSize');
 let gridArray = [];
+
 
 function createGrid(gridSize) {
     container.innerHTML = ''
@@ -22,4 +24,13 @@ function createGrid(gridSize) {
         });
     });
 }
+btnReset.addEventListener("click", event => {
+    createGrid(gridSize);
+});
+
+btnGridSize.addEventListener("click", event => {
+    gridSize=prompt('What size');
+    createGrid(gridSize);
+});
+
 createGrid(gridSize);
